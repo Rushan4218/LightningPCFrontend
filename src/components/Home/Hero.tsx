@@ -23,20 +23,20 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="-mx-60 px-60 bg-neutral-400 h-[45vh] w-screen flex items-center justify-between">
+    <div className="-mx-10 px-10 sm:-mx-20 sm:px-20 lg:-mx-32 lg:px-32 xl:-mx-40 xl:px-40 2xl:-mx-60 2xl:px-60 py-8 md:py-10 bg-neutral-400  w-screen flex flex-col-reverse items-center md:flex md:flex-row md:items-center md:justify-between ">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-col items-start gap-2"
+        className="flex-1 flex flex-col items-center text-center md:text-left md:items-start gap-2"
       >
         <motion.div
           variants={itemVariants}
-          className="text-[3rem] font-extrabold"
+          className="text-2xl md:text-3xl lg:text-[4xl] xl-text-[2.5rem] font-extrabold"
         >
           Your One-Stop PC Destination
         </motion.div>
-        <motion.div variants={itemVariants} className="mb-6">
+        <motion.div variants={itemVariants} className="mb-6 text-sm md:text-base">
           Custom PCs, pre-built systems, and laptops—all in one place.
           <br /> Built for performance, designed for you.
         </motion.div>
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </motion.div>
 
-      <img src={heroimage} alt="HEROIMAGE" className="h-full gradient-bg" />
+      <img src={heroimage} alt="HEROIMAGE" className="flex-1 w-64 md:h-72 mb-4 object-contain drop-shadow-[45px_45px_45px_rgba(0,16,20,1)]" />
     </div>
   );
 };
