@@ -17,11 +17,11 @@ const LargeHeader: React.FC = () => {
       <Link to="/">
         <img src={logo} className="h-14 object-cover" />
       </Link>
-      <div className="text-neutral-100 flex gap-5">
-        <NavLink to="/products">Products</NavLink>
-        <NavLink to="/custom">Custom</NavLink>
-        <NavLink to="/aboutus">About Us</NavLink>
-        <NavLink to="/contactus">Contact Us</NavLink>
+      <div className="text-neutral-100 flex gap-5 ">
+        <NavLink to="/products" className="underline-effect relative">Products</NavLink>
+        <NavLink to="/custom" className="underline-effect relative">Custom</NavLink>
+        <NavLink to="/aboutus" className="underline-effect relative">About Us</NavLink>
+        <NavLink to="/contactus" className="underline-effect relative">Contact Us</NavLink>
       </div>
       <div className="text-neutral-100 flex items-center text-lg gap-4">
         <FaSearch />
