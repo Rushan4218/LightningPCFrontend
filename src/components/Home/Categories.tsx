@@ -1,10 +1,11 @@
 import React from "react";
+import { SectionLayout } from "../../layouts/SectionLayout";
 
 const Categories: React.FC = () => {
   return (
-    <div>
+    <SectionLayout bgcolor="bg-neutral-900">
       <h1>CATEGORIES</h1>
-    </div>
+    </SectionLayout>
   );
 };
 
