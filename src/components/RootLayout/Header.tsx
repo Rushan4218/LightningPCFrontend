@@ -8,16 +8,12 @@ import { IoMenu } from "react-icons/io5";
 const Header: React.FC = () => {
   const isLargeScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
-  return (
-    <>
-      {isLargeScreen ? <LargeHeader /> : <SmallHeader />}
-    </>
-  );
+  return <>{isLargeScreen ? <LargeHeader /> : <SmallHeader />}</>;
 };
 
 const LargeHeader: React.FC = () => {
   return (
-    <header className="sticky top-0 h-[100px] bg-gradient-to-r from-primary-900 to-primary-800 flex items-center justify-between 2xl:px-60 xl:px-48 lg:px-40 md:px-20  shadow-lg shadow-neutral-700">
+    <header className="sticky top-0 h-[100px] bg-neutral-1000 flex items-center justify-between 2xl:px-60 xl:px-48 lg:px-40 md:px-20 shadow-md">
       <Link to="/">
         <img src={logo} className="h-14 object-cover" />
       </Link>
@@ -38,7 +34,7 @@ const LargeHeader: React.FC = () => {
 
 const SmallHeader: React.FC = () => {
   return (
-    <header className="sticky top-0 h-[80px] bg-gradient-to-r from-primary-900 to-primary-800 flex items-center justify-between px-10 sm:px-20 shadow-lg shadow-neutral-700">
+    <header className="sticky top-0 h-[80px] bg-neutral-1000 flex items-center justify-between px-10 sm:px-20 shadow-md">
       <Link to="/">
         <img src={logo} className="h-12 md:h-14 object-cover" />
       </Link>
