@@ -1,6 +1,6 @@
 import React from "react";
 import heroimage from "../../assets/heroimage.webp";
-import { Button } from "../General/Button";
+import { Button } from "../../components/Button";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
   };
   
   return (
-    <div className="relative h-[850px] px-8 flex items-center justify-center">
+    <div className="relative h-[90vh] px-8 flex items-center justify-center">
       <div className="-z-10 absolute top-0 left-0 w-full h-full overflow-clip">
         <img
           src={heroimage}

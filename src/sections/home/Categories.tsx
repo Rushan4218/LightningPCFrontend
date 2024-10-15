@@ -5,6 +5,7 @@ const Categories: React.FC = () => {
   return (
     <SectionLayout bgcolor="bg-neutral-900">
       <h1>CATEGORIES</h1>
+      
     </SectionLayout>
   );
 };
