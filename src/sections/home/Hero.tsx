@@ -3,6 +3,7 @@ import heroimage from "../../assets/heroimage.webp";
 import { Button } from "../../components/Button";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const containerVariants = {
@@ -27,10 +28,10 @@ const Hero: React.FC = () => {
       },
     },
   };
-  
+
   return (
     <div className="relative h-[90vh] px-8 flex items-center justify-center">
-      <div className="-z-10 absolute top-0 left-0 w-full h-full overflow-clip">
+      <div className="absolute top-0 left-0 w-full h-full ">
         <img
           src={heroimage}
           alt="HEROIMAGE"
@@ -55,7 +56,9 @@ const Hero: React.FC = () => {
           Built for performance, designed for you.
         </motion.div>
         <motion.div variants={itemVariants}>
-          <Button buttonText="Shop Now" />
+          <Link to="products">
+            <Button buttonText="Shop Now" />
+          </Link>
         </motion.div>
       </motion.div>
       <motion.div
@@ -67,7 +70,7 @@ const Hero: React.FC = () => {
           repeat: Infinity,
           repeatType: "loop",
           ease: "easeInOut",
-          delay: 2
+          delay: 2,
         }}
         className="absolute bottom-12 "
       >

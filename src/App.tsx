@@ -12,6 +12,7 @@ import { Product } from "./pages/Products";
 import { AboutUs } from "./pages/AboutUs";
 import { ContactUs } from "./pages/ContactUs";
 import { Custom } from "./pages/Custom";
+import { Cart } from "./pages/Cart";
 
 const App: React.FC = () => {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Route path="custom" element={<Custom />} />
         <Route path="aboutus" element={<AboutUs />} />
         <Route path="contactus" element={<ContactUs />} />
+        <Route path="cart" element={<Cart />} />
       </Route>
     )
   );
