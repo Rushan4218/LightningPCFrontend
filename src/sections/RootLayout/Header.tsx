@@ -5,8 +5,10 @@ import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import { IoMenu } from "react-icons/io5";
 import { useDispatch } from "react-redux";
-import { setTrue } from "../../redux/authModalSlice";
-import { UserAuthModal } from "../../components/modals/UserAuthModal";
+import { setAuthModalTrue } from "../../redux/authModalSlice";
+import { UserAuthModal } from "../../components/UserAuthModal";
+import { Menu } from "../../components/Menu";
+import { setMenuTrue } from "../../redux/menuSlice";
 
 const Header: React.FC = () => {
   const isLargeScreen = useMediaQuery({ query: "(min-width: 768px)" });
@@ -39,7 +41,7 @@ const LargeHeader: React.FC = () => {
       <div className="text-neutral-100 flex items-center text-lg gap-4">
         <FaSearch />
         <FaUser
-          onClick={() => dispatch(setTrue())}
+          onClick={() => dispatch(setAuthModalTrue())}
           className="hover:cursor-pointer"
         />
         <NavLink to="/cart">
@@ -52,16 +54,21 @@ const LargeHeader: React.FC = () => {
 };
 
 const SmallHeader: React.FC = () => {
+
+  const dispatch = useDispatch();
+
   return (
     <header className="sticky top-0 z-10 h-[80px] bg-neutral-1000 flex items-center justify-between px-10 sm:px-20 shadow-md">
       <Link to="/">
         <img src={logo} className="h-12 md:h-14 object-cover" />
       </Link>
-      <IoMenu className="text-3xl text-neutral-100 active:scale-90 duration-300" />
-
+      <IoMenu onClick={() => dispatch(setMenuTrue())} className="text-3xl text-neutral-100 active:scale-90 duration-300" />
       <UserAuthModal />
+      <Menu />
     </header>
   );
 };
+
+
 
 export { Header };

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Button } from "../Button";
+import { Button } from "./Button";
 import { IoIosClose } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
-import { setFalse } from "../../redux/authModalSlice";
-import { RootState } from "../../redux/store";
+import { setAuthModalFalse } from "../redux/authModalSlice";
+import { RootState } from "../redux/store";
 
 const UserAuthModal: React.FC = () => {
   const dispatch = useDispatch();
@@ -47,7 +47,7 @@ const UserAuthModal: React.FC = () => {
           </Link>
           <IoIosClose
             className="text-[3rem] absolute top-10 right-10 text-white hover:cursor-pointer active:scale-90 duration-300"
-            onClick={() => dispatch(setFalse())}
+            onClick={() => dispatch(setAuthModalFalse())}
           />
         </motion.div>
       )}

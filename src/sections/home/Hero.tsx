@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           Custom PCs, pre-built systems, and laptops—all in one place. <br />
           Built for performance, designed for you.
         </motion.div>
-        <motion.div variants={itemVariants}>
+        <motion.div className="mt-4" variants={itemVariants}>
           <Link to="products">
             <Button buttonText="Shop Now" />
           </Link>

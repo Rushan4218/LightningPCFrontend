@@ -6,15 +6,15 @@ const authModalSlice = createSlice({
     value: false,
   },
   reducers: {
-    setTrue: (state) => {
+    setAuthModalTrue: (state) => {
       state.value = true;
     },
-    setFalse: (state) => {
+    setAuthModalFalse: (state) => {
       state.value = false;
     },
   },
 });
 
-export const { setTrue, setFalse } = authModalSlice.actions;
+export const { setAuthModalTrue, setAuthModalFalse } = authModalSlice.actions;
 
 export default authModalSlice.reducer;
